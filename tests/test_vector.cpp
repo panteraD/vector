@@ -5,12 +5,14 @@
 
 typedef double Vec3[3];
 
+
 void cmp_vec_arr(const Vector &lhs, const Vec3 &rhs) {
-    assert(Vector::n == sizeof(rhs)/sizeof(rhs[0]));
+    assert(Vector::n == sizeof(rhs) / sizeof(rhs[0]));
     for (unsigned i = 0; i < Vector::n; ++i) {
         REQUIRE(lhs[i] == rhs[i]);
-    }    
+    }
 }
+
 
 TEST_CASE("Vector default ctor") {
     Vector v;
